@@ -26,6 +26,25 @@
             }
         },
         {
+            "label": "run active file",
+            "type": "shell",
+            "command": "& '${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe'",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "shell": {
+                    "executable": "powershell.exe",
+                    "args": ["-NoProfile", "-Command"]
+                }
+            },
+            "dependsOn": "build active file",
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
             "label": "create build dir",
             "type": "shell",
             "command": "if (-not (Test-Path '${workspaceFolder}\\build')) { New-Item -ItemType Directory '${workspaceFolder}\\build' | Out-Null }",
