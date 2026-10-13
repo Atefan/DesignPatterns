@@ -2,6 +2,9 @@
 #include <memory>
 
 // How does a ball bounce on different surfaces?
+// There are multiple types if balls(Biliard, Tenis, Basket ...) bouncing with different hights,
+// There are multiple types of surfaces(...)
+// 
 
 class Surface
 {
